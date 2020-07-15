@@ -32,9 +32,9 @@ DataFormats/L1TCorrelator/src/classes_def.xml
 
 add:
 
-<class name="l1t::TkPrimaryVertexRef"/>
+ <class name="l1t::TkPrimaryVertexRef"/>
 
-<class name="edm::Wrapper<l1t::TkPrimaryVertexRef>"/>
+ <class name="edm::Wrapper<l1t::TkPrimaryVertexRef>"/>
 
 .....................................................................
 
@@ -61,9 +61,9 @@ DataFormats/L1Trigger/src/classes_def.xml
 
 add:
 
-<class name="l1t::MuonPtr"/>
+ <class name="l1t::MuonPtr"/>
 
-<class name="edm::Wrapper<l1t::MuonPtr>"/>	
+ <class name="edm::Wrapper<l1t::MuonPtr>"/>	
 
 .....................................................................
 
