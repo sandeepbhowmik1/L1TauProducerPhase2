@@ -13,7 +13,6 @@
 #include "DataFormats/Phase2L1Taus/interface/L1HPSPFTauFwd.h"      // l1t::L1HPSPFTauCollection
 #include "DataFormats/L1TParticleFlow/interface/PFCandidate.h"       // l1t::PFCandidate, l1t::PFCandidateCollection, l1t::PFCandidateRef 
 #include "DataFormats/L1TParticleFlow/interface/PFJet.h"             // l1t::PFJet, l1t::PFJetCollection, l1t::PFJetRef  
-#include "DataFormats/L1TVertex/interface/Vertex.h"                       // l1t::Vertex, l1t::VertexCollection  
 #include "DataFormats/L1TCorrelator/interface/TkPrimaryVertex.h"
 
 #include <string>

@@ -3,7 +3,7 @@
 
 #include "FWCore/ParameterSet/interface/ParameterSet.h"             // edm::ParameterSet
 #include "DataFormats/L1TParticleFlow/interface/PFCandidate.h" // l1t::PFCandidate
-#include "DataFormats/L1TVertex/interface/Vertex.h"                 // l1t::Vertex
+
 
 #include <string>                                                   // std::string
 #include <vector>                                                   // std::vector

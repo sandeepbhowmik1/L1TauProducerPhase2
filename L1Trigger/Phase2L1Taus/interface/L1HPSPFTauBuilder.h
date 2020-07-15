@@ -9,7 +9,6 @@
 #include "DataFormats/Phase2L1Taus/interface/L1HPSPFTau.h"         // l1t::L1HPSPFTau
 #include "DataFormats/L1TParticleFlow/interface/PFCandidate.h"       // l1t::PFCandidate, l1t::PFCandidateCollection, l1t::PFCandidateRef
 #include "DataFormats/L1TParticleFlow/interface/PFJet.h"             // l1t::PFJet, l1t::PFJetCollection, l1t::PFJetRef
-#include "DataFormats/L1TVertex/interface/Vertex.h"                       // l1t::VertexRef
 #include "DataFormats/L1TCorrelator/interface/TkPrimaryVertex.h"
 
 #include <TFormula.h> // TFormula

@@ -5,7 +5,6 @@
 #include "DataFormats/L1TParticleFlow/interface/PFJet.h"          // l1t::PFJet, l1t::PFJetCollection, l1t::PFJetRef 
 #include "DataFormats/Candidate/interface/LeafCandidate.h"             // reco::LeafCandidate 
 #include "DataFormats/Candidate/interface/Particle.h"                  // reco::Particle::LorentzVector
-#include "DataFormats/L1TVertex/interface/Vertex.h"                    // l1t::Vertex, l1t::VertexRef
 #include "DataFormats/L1TCorrelator/interface/TkPrimaryVertex.h"
 
 #include <ostream>
