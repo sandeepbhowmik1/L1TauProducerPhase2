@@ -76,6 +76,6 @@ scram b -j 8
 
 
 
-cmsRun $CMSSW_BASE/src/L1Trigger/Phase2L1Taus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py
+cmsRun $CMSSW_BASE/src/HLTrigger/Phase2HLTPFTaus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py
 
 
