@@ -30,11 +30,10 @@ cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/DataFormats/L1Tri
 
 
 
-git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2 $CMSSW_BASE/src/L1TauProducerPhase2
+git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2 $CMSSW_BASE/src/DataFormats/Phase2L1Taus
 
-mv $CMSSW_BASE/src/L1TauProducerPhase2/DataFormats/* $CMSSW_BASE/src/DataFormats/
+git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2-DataFormats $CMSSW_BASE/src/L1Trigger/Phase2L1Taus
 
-mv $CMSSW_BASE/src/L1TauProducerPhase2/L1Trigger $CMSSW_BASE/src/
 
 scram b -j 8
 
