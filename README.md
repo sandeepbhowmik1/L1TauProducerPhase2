@@ -70,8 +70,7 @@ scram b -j 8
 
 # To Produce L1 and HLT Tau in a same file
 
-cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/L1Trigger/Phase2L1Taus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py $CMSSW_BASE/src/L1Trigger/Phase2L1Taus/test
-
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/HLTTrigger/Phase2HLTPFTaus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py $CMSSW_BASE/src/HLTrigger/Phase2HLTPFTaus/test
 
 scram b -j 8
 
