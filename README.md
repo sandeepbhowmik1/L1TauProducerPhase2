@@ -12,60 +12,22 @@ cmsenv
 git cms-init
 
 
+
+# To Reconstruct L1 HPS Tau
+
 git cms-addpkg DataFormats/L1TCorrelator
 
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/DataFormats/L1TCorrelator/interface/TkPrimaryVertex.h $CMSSW_BASE/src/DataFormats/L1TCorrelator/interface
 
-......................................................................
-
-modify
-
-DataFormats/L1TCorrelator/interface/TkPrimaryVertex.h
-
-add:
-
-typedef edm::Ref<TkPrimaryVertexCollection> TkPrimaryVertexRef;
-
-
-modify
-
-DataFormats/L1TCorrelator/src/classes_def.xml
-
-add:
-
-class name="l1t::TkPrimaryVertexRef"/
-
-class name="edm::Wrapper<l1t::TkPrimaryVertexRef>"/
-
-.....................................................................
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/DataFormats/L1TCorrelator/src/classes_def.xml $CMSSW_BASE/src/DataFormats/L1TCorrelator/src
 
 
 git cms-addpkg DataFormats/L1Trigger
 
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/DataFormats/L1Trigger/interface/Muon.h $CMSSW_BASE/src/DataFormats/L1Trigger/interface
 
-.....................................................................
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/DataFormats/L1Trigger/src/classes_def.xml $CMSSW_BASE/src/DataFormats/L1Trigger/src
 
-modify
-
-DataFormats/L1Trigger/interface/Muon.h
-
-add:
-
-typedef edm::Ptr<Muon> MuonPtr;
-
-inline void setTfMuonIndex(int index_) { tfMuonIndex_ = index_; };
-
-
-modify
-
-DataFormats/L1Trigger/src/classes_def.xml
-
-add:
-
-class name="l1t::MuonPtr"/
-
-class name="edm::Wrapper<l1t::MuonPtr>"/
-
-.....................................................................
 
 
 git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2
@@ -74,10 +36,47 @@ mv L1TauProducerPhase2/DataFormats/* DataFormats/
 
 mv L1TauProducerPhase2/L1Trigger .
 
+scram b -j 8
+
+
+
+
+# To Reconstruct HLT Tau
+
+git cms-addpkg FastSimulation/Event
+
+git remote add hatakeyamak https://github.com/hatakeyamak/cmssw.git
+
+git fetch hatakeyamak
+
+git cherry-pick 0cf67551731c80dc85130e4b8ec73c8f44d53cb0
+
+
+git cms-merge-topic veelken:CMSSW_11_1_x_maxDeltaZToLeadTrack
+
+
+git clone https://github.com/HEP-KBFI/hlttrigger-phase2hltpftaus $CMSSW_BASE/src/HLTTrigger/Phase2HLTPFTaus
+
+git clone https://github.com/HEP-KBFI/dataformats-phase2hltpftaus $CMSSW_BASE/src/DataFormats/Phase2HLTPFTaus
+
+git clone https://github.com/veelken/hlttrigger-phase2hltpftauanalyzer $CMSSW_BASE/src/HLTTrigger/TallinnHLTPFTauAnalyzer
+
+
+git clone https://github.com/missirol/JMETriggerAnalysis.git -o missirol -b phase2
 
 scram b -j 8
 
 
 
+# To Produce L1 and HLT Tau in a same file
+
+cp /home/sbhowmik/HLTTau/HLTTauProducerPhase2/CMSSW_11_1_0/src/L1Trigger/Phase2L1Taus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py $CMSSW_BASE/src/L1Trigger/Phase2L1Taus/test
+
+
+scram b -j 8
+
+
+
+cmsRun $CMSSW_BASE/src/L1Trigger/Phase2L1Taus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_copy_cfg.py
 
 
