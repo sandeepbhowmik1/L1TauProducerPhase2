@@ -55,12 +55,13 @@ git cherry-pick 0cf67551731c80dc85130e4b8ec73c8f44d53cb0
 git cms-merge-topic veelken:CMSSW_11_1_x_maxDeltaZToLeadTrack
 
 
-git clone https://github.com/HEP-KBFI/hlttrigger-phase2hltpftaus $CMSSW_BASE/src/HLTTrigger/Phase2HLTPFTaus
+git clone https://github.com/HEP-KBFI/hlttrigger-phase2hltpftaus $CMSSW_BASE/src/HLTrigger/Phase2HLTPFTaus
 
 git clone https://github.com/HEP-KBFI/dataformats-phase2hltpftaus $CMSSW_BASE/src/DataFormats/Phase2HLTPFTaus
 
-git clone https://github.com/veelken/hlttrigger-phase2hltpftauanalyzer $CMSSW_BASE/src/HLTTrigger/TallinnHLTPFTauAnalyzer
+git clone https://github.com/veelken/hlttrigger-phase2hltpftauanalyzer $CMSSW_BASE/src/HLTrigger/TallinnHLTPFTauAnalyzer
 
+git clone https://github.com/veelken/l1trigger-phase2l1pftauanalyzer $CMSSW_BASE/src/L1Trigger/TallinnL1PFTauAnalyzer
 
 git clone https://github.com/missirol/JMETriggerAnalysis.git -o missirol -b phase2
 
