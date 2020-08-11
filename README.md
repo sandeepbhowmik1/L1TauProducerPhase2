@@ -28,12 +28,10 @@ cp /home/sbhowmik/L1TauTrigger/L1TauProducerPhase2/CMSSW_11_1_2/src/DataFormats/
 cp /home/sbhowmik/L1TauTrigger/L1TauProducerPhase2/CMSSW_11_1_2/src/DataFormats/L1Trigger/src/classes_def.xml $CMSSW_BASE/src/DataFormats/L1Trigger/src
 
 
-<<<<<<< HEAD
+
 # To Reconstruct L1 HPS Tau
 
 
-=======
->>>>>>> f68e9d123d0209b87d2f5332965e10af3ae1b13a
 git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2 $CMSSW_BASE/src/L1Trigger/Phase2L1Taus 
 
 git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2-DataFormats $CMSSW_BASE/src/DataFormats/Phase2L1Taus
@@ -41,40 +39,4 @@ git clone https://github.com/sandeepbhowmik1/L1TauProducerPhase2-DataFormats $CM
 scram b -j 8
 
 
-
-<<<<<<< HEAD
-=======
-# To Reconstruct HLT Tau
-
-git cms-addpkg FastSimulation/Event
-
-git remote add hatakeyamak https://github.com/hatakeyamak/cmssw.git
-
-git fetch hatakeyamak
-
-git cherry-pick 0cf67551731c80dc85130e4b8ec73c8f44d53cb0
-
-
-git cms-merge-topic veelken:CMSSW_11_1_x_maxDeltaZToLeadTrack
-
-
-git clone https://github.com/HEP-KBFI/hlttrigger-phase2hltpftaus $CMSSW_BASE/src/HLTrigger/Phase2HLTPFTaus
-
-git clone https://github.com/HEP-KBFI/dataformats-phase2hltpftaus $CMSSW_BASE/src/DataFormats/Phase2HLTPFTaus
-
-git clone https://github.com/veelken/hlttrigger-phase2hltpftauanalyzer $CMSSW_BASE/src/HLTrigger/TallinnHLTPFTauAnalyzer
-
-git clone https://github.com/veelken/l1trigger-phase2l1pftauanalyzer $CMSSW_BASE/src/L1Trigger/TallinnL1PFTauAnalyzer
-
-git clone https://github.com/missirol/JMETriggerAnalysis.git -o missirol -b phase2
-
-scram b -j 8
-
-
-
-# To Produce L1 and HLT Tau in a same file
-
-cmsRun $CMSSW_BASE/src/HLTrigger/Phase2HLTPFTaus/test/hltPhase2_MINBIAS_TRKv06_TICL_withTaus_andL1_cfg.py
-
->>>>>>> f68e9d123d0209b87d2f5332965e10af3ae1b13a
 
