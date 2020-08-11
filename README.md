@@ -1,6 +1,5 @@
 # L1TauProducerPhase2
 
-# To run in CMSSW_11_1_2
 
 
 cmsrel CMSSW_11_1_2
